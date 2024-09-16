@@ -1,166 +1,25 @@
-#main-container {
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#container1 {
+#container {
     display: flex;
+    flex-wrap: wrap;
+    width: 960px;
+    height: 960px;
+    border: 1px solid black;
 }
 
-#container1>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
+.grid-square {
+    box-sizing: border-box;
+    border: 1px solid lightgray;
 }
 
-#container2 {
-    display: flex;
-}
-
-#container2>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
-}
-
-#container3 {
-    display: flex;
-}
-
-#container3>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
-}
-
-#container4 {
-    display: flex;
-}
-
-#container4>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
-}
-
-#container5 {
-    display: flex;
-}
-
-#container5>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
-}
-
-#container6 {
-    display: flex;
-}
-
-#container6>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
-}
-
-#container7 {
-    display: flex;
-}
-
-#container7>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
-}
-
-#container8 {
-    display: flex;
-}
-
-#container8>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
-}
-
-#container9 {
-    display: flex;
-}
-
-#container9>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
-}
-
-#container10 {
-    display: flex;
-}
-
-#container10>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
-}
-
-#container11 {
-    display: flex;
-}
-
-#container11>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
-}
-
-#container12 {
-    display: flex;
-}
-
-#container12>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
-}
-
-#container13 {
-    display: flex;
-}
-
-#container13>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
-}
-
-#container14 {
-    display: flex;
-}
-
-#container14>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
-}
-
-#container15 {
-    display: flex;
-}
-
-#container15>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
-}
-
-#container16 {
-    display: flex;
-}
-
-#container16>div {
-    margin: 0.5em;
-    padding: 2em;
-    background-color: aqua;
+button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
 }
