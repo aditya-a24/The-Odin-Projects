@@ -5,7 +5,7 @@ function createGrid(squaresPerSide) {
 
     //clear the container for the new grid
     container.innerHTML = '';
-    const squareSize = 960 / squaresPerSide; // it will gove size of each square of grid
+    const squareSize = 600 / squaresPerSide; // it will gove size of each square of grid
 
     // create grid of divs
     for (let i = 0; i < squaresPerSide * squaresPerSide; i++) {
