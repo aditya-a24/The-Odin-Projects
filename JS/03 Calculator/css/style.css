@@ -1,0 +1,39 @@
+.calculator {
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    background: darkgray;
+}
+
+.display {
+    height: 75px;
+    width: 95%;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: right;
+    padding: 10px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.buttons {
+    margin-top: 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    height: 50px;
+    width: 75px;
+    font-size: 18px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#clear {
+    width: 95%;
+}
