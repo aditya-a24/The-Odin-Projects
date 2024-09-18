@@ -1,6 +1,6 @@
-let no1;
-let no2;
-let operator;
+let no1 = null;
+let no2 = null;
+let operator = null;
 let displayValue = "0";
 
 let add = (no1, no2) => {
@@ -46,13 +46,13 @@ let divide = (no1, no2) => {
 
 let operate = (no1, no2, operator) => {
     if (operator === "+") {
-        add(no1, no2);
+        return add(no1, no2);
     } else if (operator === "-") {
-        subtract(no1, no2);
+        return subtract(no1, no2);
     } else if (operator === "*") {
-        multiply(no1, no2);
+        return multiply(no1, no2);
     } else if (operator === "/") {
-        divide(no1, no2);
+        return divide(no1, no2);
     }
 }
 
@@ -68,7 +68,7 @@ const buttons = document.querySelectorAll("button");
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         const value = button.textContent;
-        console.log(value);
+        // console.log(value);
 
         if (!isNaN(value) || value === ".") {
             handleNumber(value);
@@ -84,7 +84,7 @@ buttons.forEach(button => {
 });
 
 function handleNumber(value) {
-    console.log("in handleNumber function");
+    // console.log("in handleNumber function");
     if (value === "." && displayValue.includes(".")) {
         return;
     }
@@ -95,26 +95,71 @@ function handleNumber(value) {
     }
 }
 
+// function handleOperator(value) {
+//     // console.log("in handleOperator function");
+//     no1 = parseFloat(displayValue);
+//     // console.log("no1 = ", no1);
+//     operator = value;
+//     // console.log("operator = ", operator);
+//     displayValue = "0";
+// }
+
 function handleOperator(value) {
-    console.log("in handleOperator function");
-    no1 = parseFloat(displayValue);
+    // If there is already a first number and an operator, compute the result before assigning a new operator
+    console.log("in handleOperator function")
     console.log("no1 = ", no1);
-    operator = value;
+    console.log("no2 = ", no2);
     console.log("operator = ", operator);
-    displayValue = "0";
+    if (no1 !== null && operator !== null) {
+        console.log("in IF statement of hadle operater function")
+        no2 = parseFloat(displayValue);
+        console.log("no1 = ", no1);
+        console.log("no2 = ", no2);
+        console.log("operator = ", operator);
+        let result = operate(no1, no2, operator);
+        displayValue = Math.round(result * 10000) / 10000; // Round to 4 decimal places
+        no1 = result; // Store the result as the first number for the next operation
+    } else {
+        console.log("in ELSE statement of hadle operater function")
+        no1 = parseFloat(displayValue); // Store the current display value as the first number
+        console.log("no1 = ", no1);
+        console.log("no2 = ", no2);
+        console.log("operator = ", operator);
+    }
+
+    operator = value; // Store the selected operator
+    displayValue = "0"; // Clear the display for the next number
 }
+
+// function handleEquals() {
+//     // console.log("in handleEquals function");
+//     no2 = parseFloat(displayValue);
+//     // console.log("no2 = ", no2);
+//     let result = operate(no1, no2, operator);
+//     displayValue = Math.round(result * 10000) / 10000;
+//     // displayValue = result.toString();
+// }
 
 function handleEquals() {
     console.log("in handleEquals function");
-    no2 = parseFloat(displayValue);
+    console.log("no1 = ", no1);
     console.log("no2 = ", no2);
-    let result = operate(no1, no2, operator);
-    displayValue = Math.round(result * 10000) / 10000;
-    // displayValue = result.toString();
+    console.log("operator = ", operator);
+    if (no1 !== null && operator !== null) {
+        console.log("in IF statement of handle equal function")
+        no2 = parseFloat(displayValue);
+        console.log("no1 = ", no1);
+        console.log("no2 = ", no2);
+        console.log("operator = ", operator);
+        let result = operate(no1, no2, operator);
+        displayValue = Math.round(result * 10000) / 10000;  // Round to 4 decimal places
+        no1 = result; // Store the result as the first number
+        operator = null; // Clear the operator for future operations
+    }
 }
 
 function clearCalculator() {
-    console.log("in clearCalculator function");
+    // console.log("in clearCalculator function");
     displayValue = "0";
     no1 = null;
     no2 = null;
