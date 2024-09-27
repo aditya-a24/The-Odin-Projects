@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Library</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>My Dialog box</h1>
+
+    <!-- <dialog open>
+      <p>hello world</p>
+      <form action="#" method="dialog">
+        method= "dialog" attribute of form, will close the dialog box after clicking on ok, it will save the form but do not submit it
+        <button>ok</button>
+      </form>
+    </dialog> -->
+
+    <!-- <dialog>
+      <button autofocus>close</button>
+      <p>This modal dialog has a groovy backdrop!</p>
+    </dialog>
+    <button>Show the dialog</button> -->
+
+    <dialog id="favDialog">
+      <form action="#">
+        <p>
+          <label>
+            Favourite animal:
+            <select>
+              <option value="default">Choose...</option>
+              <option>Brine shrimp</option>
+              <option>Red panda</option>
+              <option>Spider monkey</option>
+            </select>
+          </label>
+        </p>
+        <div>
+          <button value="cancel" formmethod="dialog">Cancel</button>
+          <button id="confirmBtn" value="default">Confirm</button>
+        </div>
+      </form>
+    </dialog>
+    <p>
+      <button id="showDialog">Show the dialog</button>
+    </p>
+    <output></output>
+    <script src="./script.js"></script>
+  </body>
+</html>
