@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>My Library</h1>
+    
+    <!-- display all books in the list -->
+    <button id="new-book-btn">New Book</button>
+    <!-- button to add new book in list-->
+    <dialog id="book-form">
+      <form action="#'method="dialog">
+        <input
+          type="text"
+          name="title"
+          id="title"
+          placeholder="Book Title"
+          required
+        />
+        <input
+          type="text"
+          name="author"
+          id="author"
+          placeholder="Author Name"
+          required
+        />
+        <input
+          type="number"
+          name="pages"
+          id="pages"
+          placeholder="No. of pages in the book"
+        />
+        <label for="readYet"
+          >Read Yet
+          <input type="checkbox" name="readYet" id="readYet" />
+        </label>
+        <button type="submit">Add Book</button>
+        <button type="button" id="close-dialog">Close</button>
+      </form>
+    </dialog>
+
+    <div id="book-list"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
