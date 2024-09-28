@@ -22,6 +22,7 @@ body>h1 {
 #showDialog,
 .dialogBtn {
     padding: 1em 2em;
+    margin-bottom: 1em;
     border-style: none;
     background-color: #3f51b5;
     font-size: 18px;
@@ -91,6 +92,7 @@ label {
     align-items: center;
     justify-content: center; */
     display: grid;
+    width: 90%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     margin-bottom: 2em;
