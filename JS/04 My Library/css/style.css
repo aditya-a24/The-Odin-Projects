@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: raleway;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body>h1 {
+    font-family: raleway;
+    text-align: center;
+    margin: 1em 0;
+}
+
+#showDialog,
+.dialogBtn {
+    padding: 1em 2em;
+    border-style: none;
+    background-color: #3f51b5;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#showDialog:hover {
+    background-color: #757de8;
+}
+
+.dialogBtn:hover {
+    background-color: #757de8;
+}
+
+#showDialog {
+    display: flex;
+    align-items: center;
+}
+
+dialog {
+    /* border: 1px solid lightgray; */
+    margin: auto;
+    border-style: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    padding: 3em 0;
+}
+
+dialog>form {
+    text-align: center;
+    justify-content: center;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    border-style: none;
+    background-color: lightgray;
+    color: black;
+    outline: none;
+}
+
+label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 1em;
+}
+
+.dialogBtn {
+    margin-left: 1em;
+    /* width: 150px; */
+}
+
+
+/* DSIPLAY BOOK LIST */
+
+#displayBook {
+    /* background-color: lightgray; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    margin-bottom: 2em;
+}
+
+#displayBook>p {
+    margin-top: 2em;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+/* DISPLAY BOOK LIST CARD */
+
+.card {
+    background-color: #3f51b5;
+    color: white;
+    border-radius: 20px;
+    margin: 1em;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.card>h1 {
+    margin-bottom: 10px;
+}
+
+.card>p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.card>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card>div>button {
+    padding: 0.5em 1em;
+    border-style: none;
+    background-color: white;
+    font-size: 16px;
+    color: black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.remove-book {
+    margin-right: 1em;
+}
