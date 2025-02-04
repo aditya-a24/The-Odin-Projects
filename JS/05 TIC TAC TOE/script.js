@@ -147,14 +147,14 @@ const Game = (() => {
     let player2;
     let currentPlayer;
     let gameOver = false;
-    let isAgainstComputer = false; // ✅ Track if playing vs AI
+    let isAgainstComputer = false; // Track if playing vs AI
 
     const startGame = (name1, name2, againstAI = false) => {
         player1 = Player(name1, "X");
         player2 = Player(name2, "O");
         currentPlayer = player1;
         gameOver = false;
-        isAgainstComputer = againstAI; // ✅ Set AI mode
+        isAgainstComputer = againstAI; // Set AI mode
         Gameboard.board.fill("");
         renderBoard();
         statusTextElement.textContent = `${player1.name}'s turn.`;
@@ -178,7 +178,7 @@ const Game = (() => {
                 statusTextElement.textContent = `${currentPlayer.name}'s turn.`;
 
                 if (isAgainstComputer && currentPlayer === player2) {
-                    setTimeout(computerMove, 500); // ✅ Delay AI move for realism
+                    setTimeout(computerMove, 500); // Delay AI move for realism
                 }
             }
         } else {
